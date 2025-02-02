@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hero {
+    width:100%;
+    height: 100vh;
+    /*flex-direction: column;*/
+}
+.navigation-bar {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 70px;
+    padding-right: 90px;
+    position: relative;
+}
+.nav-left {
+    display: flex;
+    align-items: flex-end;
+    gap:15px;
+}
+.menu-bar {
+    width:100%;
+    color: white;
+    background-color: rgb(42, 50, 210);
+    padding:5px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+ul li a:hover{
+    text-decoration: underline;
+}
+.nav-right img {
+    width:20px;
+}
+img {
+    cursor: pointer;
+}
+.header-content{
+    width:100%;
+    height:60%;
+    background: url('copilot.png');
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+.header-text{
+    position: absolute;
+    top:50%;
+    color:black;
+    transform: translateY(-50%);
+    left:8%;
+    border:1px solid white;
+    background-color: white;
+    padding: 10px;
+    width:40%;
+}
+.header-text h3 {
+    font-size: 30px;
+}
+.btn button {
+    border:none;
+    outline: none;
+    cursor:pointer;
+    padding: 8px 18px;
+    margin-top: 5px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgb(42, 50, 210);
+    color:white;
+}
+.btn button:hover{
+    background-color: rgb(13, 19, 147);
+}
+.buttom-menu img{
+    width:100%;
+    align-items: center;
+}
+
+.shop-menu img {
+    width:40px;
+    align-items: center;
+    padding: 0 90px;
+}
+.shop-menu a{
+    color:rgb(13, 19, 147);
+    text-decoration: underline;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 17px;
+    margin-top: 5px;
+}
+.shop-menu a:hover{
+    color: rgb(4, 8, 77);
+}
+.info-menu {
+    width:100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.first img{
+    width:100%;
+}
+.first {
+    border:1px solid rgb(195, 195, 195);
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.first button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(42, 50, 210);
+    color:white;
+    font-weight: 600;
+    border: none;
+    border-radius: 2px;
+}
+.second img{
+    width:100%;
+}
+.second {
+    border:1px solid rgb(195, 195, 195);
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.second button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(42, 50, 210);
+    color:white;
+    font-weight: 600;
+    border:none;
+    border-radius: 2px;
+}
+.third img{
+    width:100%;
+}
+.third {
+    border:1px solid rgb(195, 195, 195);
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.third button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(42, 50, 210);
+    color:white;
+    font-weight: 600;
+    border:none;
+    border-radius: 2px;
+}
+.fourth img{
+    width:100%;
+}
+.fourth {
+    border:1px solid rgb(195, 195, 195);
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.fourth button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(42, 50, 210);
+    color:white;
+    font-weight: 600;
+    border:none;
+    border-radius: 2px;
+}
