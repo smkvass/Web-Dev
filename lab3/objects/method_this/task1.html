@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            function makeUser(){
+                return{
+                    name:"John",
+                    ref:this
+                };
+            }
+            let user = mekeUser();
+            alert(user.ref.name);
+            //ref - error 
+        </script>
+    </body>
+</html>

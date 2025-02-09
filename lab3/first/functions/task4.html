@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            function pow(x, n){
+                let res = x;
+
+                for(let i = 1; i < n;i++){
+                    res *= x;
+                }
+                return res;
+            }
+
+            let x = prompt('Enter x: ', '');
+            let n = prompt('Enter n: ', '');
+
+            alert(pow(x,n));
+        </script>
+    </body>
+</html>
