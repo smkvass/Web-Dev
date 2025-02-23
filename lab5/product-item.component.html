@@ -1,0 +1,12 @@
+<div class="product">
+    <img [src]="product.image" [alt]="product.name" />
+    <h3>{{ product.name }}</h3>
+    <p>⭐ {{ product.rate }}</p>
+    <p>{{ product.description }}</p>
+    <div class="links">
+      <a [href]="product.whatsappLink" target="_blank" class="whatsapp-link">Whatsapp</a>
+      <a [href]="product.telegramLink" target="_blank" class="telegram-link">Telegram</a>
+    </div>    
+    <button class="like-btn" (click)="likeProduct()">{{ product.likes }}</button>
+    <button class="delete-btn" (click)="deleteProduct()">Удалить</button>
+  </div>

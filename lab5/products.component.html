@@ -1,0 +1,13 @@
+<section class="product-list">
+    <div class="product" *ngFor="let product of productpictures">
+      <img [src]="product.image" [alt]="product.name">
+      <h3>{{ product.name }}</h3>
+      <p>⭐ {{ product.rate }}</p>
+      <p>{{ product.description }}</p>
+      <div class="links">
+        <a [href]="product.whatsappLink" target="_blank">WhatsApp</a>
+        <a [href]="product.telegramLink" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </section>
+  

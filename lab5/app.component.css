@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    color: brown;
+}
+.categories {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.categories-btn {
+    background: rgb(181, 67, 67);
+    color: rgb(0,0,0);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+.categories-btn:hover{
+    background: rgb(78, 22, 22);
+    color: white;
+}
+h2 {
+    text-align: center;
+    color: rgb(20, 84, 63);
+}
