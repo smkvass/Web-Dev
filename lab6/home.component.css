@@ -1,0 +1,16 @@
+.find-section {
+    padding: 10px 15px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: black;
+    width: 300px;
+}
+.primary {
+    padding: 10px 13px;
+    border-width:1px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: rgba(92, 15, 147, 0.869);
+    color: white;
+}
+
