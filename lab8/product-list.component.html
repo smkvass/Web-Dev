@@ -1,0 +1,11 @@
+<h2>Список товаров</h2>
+<ul *ngIf="products.length > 0; else noProducts">
+  <li *ngFor="let product of products">
+    <strong>{{ product.name }}</strong> - {{ product.price }}₸
+  </li>
+</ul>
+
+<ng-template #noProducts>
+  <p>Товары не найдены</p>
+</ng-template>
+
