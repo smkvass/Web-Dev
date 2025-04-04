@@ -1,35 +1,44 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from rest_framework import generics
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
-import json
-from django.http import JsonResponse
-@api_view(['GET'])
-def get_products(request):
-    products = Product.objects.all()
-    serializer = ProductSerializer(products, many=True)
-    return JsonResponse(serializer.data, safe=False, json_dumps_params={'ensure_ascii': False})
 
-@api_view(['GET'])
-def get_product(request, id):
-    try:
-        product = Product.objects.get(id=id)
-        serializer = ProductSerializer(product)
-        return Response(serializer.data)
-    except Product.DoesNotExist:
-        return Response({"error": "Product not found"}, status=404)
+class ProductListView(generics.ListCreateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
 
-@api_view(['GET'])
-def get_categories(request):
-    categories = Category.objects.all()
-    serializer = CategorySerializer(categories, many=True)
-    return Response(serializer.data)
 
-@api_view(['GET'])
-def get_category(request, id):
-    try:
-        category = Category.objects.get(id=id)
-        serializer = CategorySerializer(category)
-        return Response(serializer.data)
-    except Category.DoesNotExist:
-        return Response({"error": "Category not found"}, status=404)
+class ProductDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+
+class CategoryListView(generics.ListCreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class CategoryDetailView(generics.RetrieveAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class CategoryProductsView(generics.ListAPIView):
+    serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        category_id = self.kwargs['id']
+        return Product.objects.filter(category_id=category_id)
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
