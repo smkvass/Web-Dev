@@ -1,8 +1,9 @@
+# Create your views here.
 from rest_framework import generics
 from .models import Company, Vacancy
 from .serializers import CompanySerializer, VacancySerializer
 
-# Create your views here.
+
 class CompanyListView(generics.ListCreateAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
@@ -31,3 +32,16 @@ class VacancyDetailView(generics.RetrieveUpdateDestroyAPIView):
 class TopTenVacancies(generics.ListAPIView):
     queryset = Vacancy.objects.order_by('-salary')[:10]
     serializer_class = VacancySerializer
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
